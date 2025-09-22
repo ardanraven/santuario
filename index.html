@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santuário de Hécate - Um Caminho de Devoção</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fontes do Google (Cinzel para títulos, Inter para corpo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* bg-gray-900 */
+        }
+        .font-display {
+            font-family: 'Cinzel', serif;
+        }
+        /* Efeito de sublinhado animado para links do menu */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            background-color: #facc15; /* yellow-400 */
+            transition: all 0.3s ease-in-out;
+            transform: translateX(-50%);
+        }
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        .nav-link.active {
+            color: #facc15; /* yellow-400 */
+        }
+        .card-glow {
+            transition: all 0.3s ease;
+        }
+        .card-glow:hover {
+            box-shadow: 0 0 15px rgba(250, 204, 21, 0.4), 0 0 5px rgba(250, 204, 21, 0.6);
+            transform: translateY(-5px);
+        }
+        /* Estilos para o menu mobile */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-300 antialiased">
+
+    <!-- Cabeçalho e Navegação -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 shadow-lg shadow-black/20">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-display text-2xl font-bold text-white tracking-widest">
+                <a href="#inicio">HÉCATE</a>
+            </div>
+            <!-- Menu para Desktop -->
+            <div class="hidden md:flex space-x-8 text-sm font-semibold tracking-wider uppercase">
+                <a href="#caminho" class="nav-link text-gray-300 hover:text-yellow-400">O Caminho</a>
+                <a href="#simbolos" class="nav-link text-gray-300 hover:text-yellow-400">Símbolos</a>
+                <a href="#praticas" class="nav-link text-gray-300 hover:text-yellow-400">Práticas</a>
+                <a href="#recursos" class="nav-link text-gray-300 hover:text-yellow-400">Recursos</a>
+            </div>
+            <!-- Botão do Menu Mobile -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <i class="fas fa-bars fa-2x"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden flex-col items-center py-4 space-y-4 bg-gray-900/95 absolute top-full left-0 w-full">
+            <a href="#caminho" class="nav-link text-gray-300 hover:text-yellow-400 uppercase text-lg">O Caminho</a>
+            <a href="#simbolos" class="nav-link text-gray-300 hover:text-yellow-400 uppercase text-lg">Símbolos</a>
+            <a href="#praticas" class="nav-link text-gray-300 hover:text-yellow-400 uppercase text-lg">Práticas</a>
+            <a href="#recursos" class="nav-link text-gray-300 hover:text-yellow-400 uppercase text-lg">Recursos</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção de Início -->
+        <section id="inicio" class="h-screen bg-cover bg-center flex items-center justify-center text-center text-white" style="background-image: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 1)), url('https://placehold.co/1920x1080/000000/FFFFFF?text=Por+Sacerdote+Leonardo');">
+            <div class="container mx-auto px-6">
+                <h1 class="font-display text-5xl md:text-7xl font-bold tracking-wider uppercase">Santuário de Hécate</h1>
+                <p class="text-lg md:text-xl mt-4 max-w-2xl mx-auto font-light">Um caminho de devoção, sabedoria e encontro com a Guardiã das Encruzilhadas.</p>
+                <a href="#caminho" class="mt-8 inline-block bg-yellow-400 text-gray-900 font-bold py-3 px-8 rounded-full uppercase tracking-widest hover:bg-yellow-300 transition-all duration-300">Iniciar a Jornada</a>
+            </div>
+        </section>
+
+        <!-- Seção "O Caminho" -->
+        <section id="caminho" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="font-display text-4xl font-bold text-white mb-4">O Caminho do Devoto</h2>
+                <p class="max-w-3xl mx-auto mb-12 text-gray-400">Este santuário foi criado como um guia. Cada seção é um passo na jornada para compreender e honrar a Deusa Tríplice, Senhora da Magia e da Noite.</p>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Card Mitologia -->
+                    <div class="bg-gray-800 p-8 rounded-lg card-glow border border-gray-700">
+                        <i class="fas fa-book-open text-yellow-400 text-4xl mb-4"></i>
+                        <h3 class="font-display text-xl font-bold text-white mb-2">Mitologia e História</h3>
+                        <p class="text-gray-400">Explore as origens, os mitos e a evolução de Hécate através dos tempos.</p>
+                    </div>
+                    <!-- Card Símbolos -->
+                    <div class="bg-gray-800 p-8 rounded-lg card-glow border border-gray-700">
+                        <i class="fas fa-key text-yellow-400 text-4xl mb-4"></i>
+                        <h3 class="font-display text-xl font-bold text-white mb-2">Símbolos e Epítetos</h3>
+                        <p class="text-gray-400">Desvende o significado de suas chaves, tochas, cães e da encruzilhada.</p>
+                    </div>
+                    <!-- Card Práticas -->
+                    <div class="bg-gray-800 p-8 rounded-lg card-glow border border-gray-700">
+                         <i class="fas fa-fire text-yellow-400 text-4xl mb-4"></i>
+                        <h3 class="font-display text-xl font-bold text-white mb-2">Práticas e Rituais</h3>
+                        <p class="text-gray-400">Aprenda a construir altares, fazer oferendas e realizar rituais de devoção.</p>
+                    </div>
+                    <!-- Card Recursos -->
+                    <div class="bg-gray-800 p-8 rounded-lg card-glow border border-gray-700">
+                        <i class="fas fa-folder-open text-yellow-400 text-4xl mb-4"></i>
+                        <h3 class="font-display text-xl font-bold text-white mb-2">Recursos Adicionais</h3>
+                        <p class="text-gray-400">Aprofunde seus estudos com vídeos, artigos em PDF e links recomendados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Divisor Estilizado -->
+        <div class="w-full h-px bg-gradient-to-r from-gray-900 via-yellow-400 to-gray-900"></div>
+
+        <!-- Seção Símbolos -->
+        <section id="simbolos" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-6">
+                <h2 class="font-display text-4xl font-bold text-white text-center mb-12">Símbolos Sagrados</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-key text-yellow-400 text-3xl mt-1 fa-fw"></i>
+                        <div>
+                            <h3 class="font-display text-xl font-bold text-white mb-1">As Chaves</h3>
+                            <p class="text-gray-400">Hécate detém as chaves que abrem os portões entre os mundos, incluindo os do conhecimento, do subconsciente e da vida após a morte. Simbolizam acesso ao oculto.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-fire text-yellow-400 text-3xl mt-1 fa-fw"></i>
+                        <div>
+                            <h3 class="font-display text-xl font-bold text-white mb-1">As Tochas</h3>
+                            <p class="text-gray-400">Representam a luz da sabedoria que ilumina a escuridão da ignorância. Hécate guiou Perséfone para fora do submundo com suas tochas, simbolizando a orientação espiritual.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-road text-yellow-400 text-3xl mt-1 fa-fw"></i>
+                        <div>
+                            <h3 class="font-display text-xl font-bold text-white mb-1">A Encruzilhada</h3>
+                            <p class="text-gray-400">Seu domínio mais conhecido. A encruzilhada de três caminhos simboliza escolha, transição e o poder sobre o passado, presente e futuro.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-dog text-yellow-400 text-3xl mt-1 fa-fw"></i>
+                        <div>
+                            <h3 class="font-display text-xl font-bold text-white mb-1">Os Cães</h3>
+                            <p class="text-gray-400">Seus companheiros leais, os cães negros, são guardiões e mensageiros. O uivo de um cão à noite era frequentemente visto como um sinal da presença de Hécate.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <svg class="w-8 h-8 text-yellow-400 mt-1 flex-shrink-0" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="4"/>
+                            <path d="M50 50 L15 35 M50 50 L15 65 M50 50 L50 10" stroke="currentColor" stroke-width="4"/>
+                            <path d="M50 50 L85 35 M50 50 L85 65 M50 50 L50 90" stroke="currentColor" stroke-width="4"/>
+                            <path d="M50 50 L20 78 M50 50 L80 78 M50 50 L68 18" stroke="currentColor" stroke-width="4"/>
+                        </svg>
+                        <div>
+                            <h3 class="font-display text-xl font-bold text-white mb-1">O Strophalos (Roda de Hécate)</h3>
+                            <p class="text-gray-400">Um antigo símbolo que representa o labirinto do conhecimento e o poder serpentino da vida. É usado em invocações e como um foco meditativo.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-moon text-yellow-400 text-3xl mt-1 fa-fw"></i>
+                        <div>
+                            <h3 class="font-display text-xl font-bold text-white mb-1">A Lua Negra</h3>
+                            <p class="text-gray-400">Como deusa da noite e da feitiçaria, ela está intrinsecamente ligada à fase da Lua Nova (ou Lua Negra), um tempo de introspecção, magia e novos começos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divisor Estilizado -->
+        <div class="w-full h-px bg-gradient-to-r from-gray-800/50 via-yellow-400 to-gray-800/50"></div>
+        
+        <!-- Seção Práticas -->
+        <section id="praticas" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 class="font-display text-4xl font-bold text-white text-center mb-12">Práticas Devocionais</h2>
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    
+                    <div class="bg-gray-800 p-8 rounded-lg border border-gray-700">
+                        <h3 class="font-display text-2xl font-bold text-yellow-400 mb-4">Montando um Altar</h3>
+                        <p class="mb-4 text-gray-400">Seu altar é um espaço sagrado de conexão. Não precisa ser complexo. Considere incluir:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li><strong>Velas:</strong> Pretas, brancas, pratas ou roxas.</li>
+                            <li><strong>Símbolos:</strong> Chaves, imagens de cães, um Strophalos.</li>
+                            <li><strong>Oferendas:</strong> Vinho tinto, mel, alho, ovos, romãs, pão.</li>
+                            <li><strong>Incensos:</strong> Mirra, artemísia, sândalo, cipreste.</li>
+                            <li><strong>Elementos da Natureza:</strong> Pedras (ônix, obsidiana), galhos de teixo ou salgueiro, terra de uma encruzilhada.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-800 p-8 rounded-lg border border-gray-700">
+                        <h3 class="font-display text-2xl font-bold text-yellow-400 mb-4">Invocação Simples</h3>
+                        <p class="mb-4 text-gray-400">Acenda uma vela e um incenso. Centre-se e respire fundo. Diga com reverência:</p>
+                        <blockquote class="border-l-4 border-yellow-400 pl-4 italic text-gray-300">
+                            "Hécate, Senhora da Tocha Noturna, Guardiã das Encruzilhadas,<br>
+                            Eu te chamo e te honro neste espaço sagrado.<br>
+                            Que sua sabedoria ilumine meu caminho,<br>
+                            Que sua chave revele os mistérios que busco.<br>
+                            Aceite minha devoção e guie-me na escuridão e na luz.<br>
+                            Khaire Hecate!"
+                        </blockquote>
+                    </div>
+
+                    <div class="lg:col-span-2 bg-gray-800 p-8 rounded-lg border border-gray-700">
+                        <h3 class="font-display text-2xl font-bold text-yellow-400 mb-4">Meditação da Encruzilhada</h3>
+                        <p class="mb-4 text-gray-400">Esta é uma prática de visualização para buscar orientação em momentos de decisão.</p>
+                        <ol class="list-decimal list-inside space-y-2 text-gray-300">
+                            <li>Sente-se confortavelmente em um local tranquilo. Feche os olhos e respire profundamente, liberando as tensões.</li>
+                            <li>Visualize-se caminhando por uma floresta antiga sob o luar. Sinta o ar fresco da noite e ouça os sons da natureza.</li>
+                            <li>À frente, você avista uma encruzilhada de três caminhos. No centro, uma figura imponente e serena segura duas tochas. É Hécate.</li>
+                            <li>Aproxime-se com respeito. Apresente sua dúvida ou a decisão que precisa tomar. Não peça a resposta, peça clareza.</li>
+                            <li>Permaneça em silêncio. Observe os caminhos. Sinta qual deles ressoa com você. A resposta pode não ser uma voz, mas um sentimento, uma imagem ou uma intuição.</li>
+                            <li>Agradeça a Hécate por sua presença e sabedoria. Curve-se e retorne pelo caminho que veio, trazendo a clareza consigo. Abra os olhos quando estiver pronto.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divisor Estilizado -->
+        <div class="w-full h-px bg-gradient-to-r from-gray-900 via-yellow-400 to-gray-900"></div>
+
+        <!-- Seção de Recursos -->
+        <section id="recursos" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-6">
+                <h2 class="font-display text-4xl font-bold text-white text-center mb-12">Recursos para Aprofundamento</h2>
+                <div class="grid lg:grid-cols-2 gap-12">
+                    
+                    <!-- Coluna de Vídeos -->
+                    <div>
+                        <h3 class="font-display text-2xl text-yellow-400 mb-6 border-b-2 border-yellow-400/50 pb-2">Vídeos Recomendados</h3>
+                        <div class="space-y-6">
+                            <!-- Vídeo 1 -->
+                            <div class="aspect-w-16 aspect-h-9">
+                               <iframe class="w-full h-full rounded-lg shadow-lg" src="https://www.youtube.com/embed/-uQhB-_wP5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                             <!-- Vídeo 2 -->
+                             <div class="aspect-w-16 aspect-h-9">
+                                <iframe class="w-full h-full rounded-lg shadow-lg" src="https://www.youtube.com/embed/8kQBHKXJ75c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                             </div>
+                             <!-- Vídeo 3 -->
+                             <div class="aspect-w-16 aspect-h-9">
+                                <iframe class="w-full h-full rounded-lg shadow-lg" src="https://www.youtube.com/embed/HHZkC2wZg7Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Coluna de PDFs e Links -->
+                    <div>
+                        <h3 class="font-display text-2xl text-yellow-400 mb-6 border-b-2 border-yellow-400/50 pb-2">Biblioteca (PDFs)</h3>
+                        <div class="space-y-4">
+                            <!-- Link PDF 1 -->
+                            <a href="https://drive.google.com/file/d/1nCNR682bCkmIvW7l1BW8CKYxkvaQbL-0/view" target="_blank" class="block bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition-all duration-300 card-glow">
+                                <p class="font-bold text-white"><i class="fas fa-file-pdf mr-2 text-yellow-400"></i>Hekate Deusa da Feitiçaria</p>
+                            </a>
+                             <!-- Link PDF 2 -->
+                            <a href="https://drive.google.com/file/d/1QhSHBewG3zIvZ7GvgnqI5VXGgfnV1G77/view" target="_blank" class="block bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition-all duration-300 card-glow">
+                                <p class="font-bold text-white"><i class="fas fa-file-pdf mr-2 text-yellow-400"></i>Hekate um devocional</p>
+                            </a>
+                             <!-- Link PDF 3 -->
+                             <a href="https://drive.google.com/file/d/1hbHbGMttGm7h2G3DTwci6GijewHB54eC/view" target="_blank" class="block bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition-all duration-300 card-glow">
+                                <p class="font-bold text-white"><i class="fas fa-file-pdf mr-2 text-yellow-400"></i>Hekate a Deusa das bruxas</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: Chamada para o Curso -->
+        <section id="curso" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="font-display text-4xl font-bold text-white mb-4">Gostaria de aprender mais a fundo?</h2>
+                 <p class="max-w-2xl mx-auto mb-8 text-gray-400">Se este santuário despertou sua chama, convido você a aprofundar seus conhecimentos e práticas em uma jornada estruturada e guiada.</p>
+                 <a href="https://caminhodatocha.site" target="_blank" class="inline-block bg-yellow-400 text-gray-900 font-bold py-4 px-10 rounded-full uppercase tracking-widest hover:bg-yellow-300 transition-all duration-300 text-lg shadow-lg shadow-yellow-400/20">
+                    Conheça o Curso: Caminho da Tocha
+                 </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-black/50 border-t border-gray-800">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-500">
+            <p>&copy; 2025 Santuário de Hécate. Que suas tochas iluminem sempre o seu caminho.</p>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Lógica do Menu Mobile
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('flex');
+            });
+
+            // Fecha o menu mobile ao clicar em um link
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
+                });
+            });
+
+            // Lógica da Navegação Ativa
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    // Erro de digitação corrigido aqui
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            const linkHref = link.getAttribute('href').substring(1);
+                            if (linkHref === entry.target.id) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, { rootMargin: '-50% 0px -50% 0px' });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+</body>
+</html>
+
